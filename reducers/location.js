@@ -34,7 +34,7 @@ export function locationIsLoading(state = false, action) {
             return state;
     }
 }
-export function location(state = [], action) {
+export function location(state = null, action) {
     switch (action.type) {
         case 'LOCATION_FETCH_DATA_SUCCESS':
             return action.location;
