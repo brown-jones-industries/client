@@ -1,0 +1,27 @@
+{
+  "name": "uber-lyft-client",
+  "version": "1.0.0",
+  "repository": "git@github.com:brown-jones-industries/client.git",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^3.0.1-beta.3",
+    "next-redux-wrapper": "^1.1.2",
+    "react": "15.6.1",
+    "react-dom": "15.6.1",
+    "react-redux": "^5.0.2",
+    "redux": "^3.6.0",
+    "redux-promise": "^0.5.3",
+    "redux-promise-middleware": "^4.3.0",
+    "redux-thunk": "^2.2.0"
+  },
+  "scripts": {
+    "dev": "node server",
+    "build": "next build",
+    "start": "NODE_ENV=production node server"
+  },
+  "devDependencies": {
+    "sw-precache-webpack-plugin": "^0.11.3"
+  },
+  "main": "server.js",
+  "author": "Brady Brown <bobrown101@gmail.com>"
+}
