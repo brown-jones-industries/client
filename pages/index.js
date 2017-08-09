@@ -3,6 +3,7 @@ import React from 'react';
 import withRedux from 'next-redux-wrapper';
 
 import Todo from '../components/Todo';
+import NavigationBar from '../components/navigation/NavigationBar';
 import LocationButton from '../components/LocationButton';
 
 import initStore from '../utils/store';
@@ -34,6 +35,7 @@ class Index extends React.Component {
                 <div>
                     <Todo />
                     <LocationButton />
+                    <NavigationBar />
                 </div>
             </div>
         );

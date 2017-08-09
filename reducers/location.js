@@ -1,22 +1,4 @@
 import { combineReducers } from 'redux';
-// import { GET_LOCATION, LOCATION_RECIEVED } from '../actions/types/';
-
-// export default async function(state = {}, action) {
-//     //you technically dont have to, but I like to keep my actions in the form of 
-//     //{type, payload} where type is the type as a string, and payload is the 
-//     //object holding whatever info pertains to that action. It can also be null
-// 	const { type, payload } = action;
-//     console.log("action", action, " state", state);
-// 	switch (type) {
-// 		case GET_LOCATION:
-//             getLocation();
-//             return state;
-//         case LOCATION_RECIEVED:
-//             return action.payload;
-// 		default:
-// 			return state;
-// 	}
-// }
 
 export function locationHasErrored(state = false, action) {
     switch (action.type) {
@@ -43,8 +25,16 @@ export function location(state = null, action) {
     }
 }
 
+//now here I named my functions the same as how I want the state to be,
+//but if I wanted didnt, I could do something like this:
+// export default combineReducers({
+//     "alerternateName": location,
+//     "test": locationHasErrored,
+//     "asdf": locationIsLoading
+// });
+
 export default combineReducers({
-    location,
-    locationHasErrored,
-    locationIsLoading
+  location,
+  locationHasErrored,
+  locationIsLoading,
 });

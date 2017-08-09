@@ -1,3 +1,6 @@
+/* global navigator */
+
+
 /**
  * Registers our Service Worker on the site
  * Need more? check out:
@@ -9,12 +12,12 @@ if (
     typeof window !== 'undefined' &&
     'serviceWorker' in navigator
 ) {
-    navigator.serviceWorker
+  navigator.serviceWorker
         .register('sw.js')
-        .then(function(reg) {
-            console.log('Service worker registered (0-0) ');
+        .then((reg) => {
+          console.log('Service worker registered (0-0) ', reg);
         })
-        .catch(function(e) {
-            console.error('Error during service worker registration:', e);
+        .catch((e) => {
+          console.error('Error during service worker registration:', e);
         });
 }

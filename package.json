@@ -6,6 +6,7 @@
   "dependencies": {
     "next": "^3.0.1-beta.3",
     "next-redux-wrapper": "^1.1.2",
+    "prop-types": "^15.5.10",
     "react": "15.6.1",
     "react-dom": "15.6.1",
     "react-redux": "^5.0.2",
@@ -17,10 +18,17 @@
   "scripts": {
     "dev": "node server",
     "build": "next build",
-    "start": "NODE_ENV=production node server"
+    "start": "NODE_ENV=production node server",
+    "lint": "./node_modules/eslint/bin/eslint.js ."
   },
   "devDependencies": {
-    "sw-precache-webpack-plugin": "^0.11.3"
+    "sw-precache-webpack-plugin": "^0.11.3",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-loader": "^1.8.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.0.1",
+    "eslint-plugin-react": "^7.1.0"
   },
   "main": "server.js",
   "author": "Brady Brown <bobrown101@gmail.com>"
