@@ -6,10 +6,12 @@ import { locationFetchLocation } from "../actions/location";
 class Background extends React.Component {
 
     constructor(props){
-        super(props);
+      super(props);
 
-        this.
+      this.clicks = 0;
     };
+
+
   render() {
     return (
       <div id="background-container">
@@ -20,5 +22,5 @@ class Background extends React.Component {
 }
 
 export default connect(({ location }) => ({ location }), {
-  locationFetchLocation
+  locationFetchLocation,
 })(Background);
