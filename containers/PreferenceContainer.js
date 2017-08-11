@@ -10,6 +10,7 @@ class PreferenceContainer extends React.Component {
     console.log(this.props);
     return (
       <CheapOrFast
+        preference={this.props.weightedPreference}
         setPreferenceFast={this.props.setPreferenceFast} 
         setPreferenceCheap={this.props.setPreferenceCheap} 
       />
@@ -18,6 +19,6 @@ class PreferenceContainer extends React.Component {
 }
 
 
-export default connect(({ }) => ({ }), { setPreferenceCheap, setPreferenceFast })(
+export default connect(({ weightedPreference }) => ({ weightedPreference }), { setPreferenceCheap, setPreferenceFast })(
   PreferenceContainer,
 );

@@ -1,13 +1,14 @@
 import React from "react";
 import { connect } from "react-redux";
+import GoeeyRadio from './GoeeyRadio';
 
-export default ({ setPreferenceCheap, setPreferenceFast }) =>
+export default ({ preference, setPreferenceCheap, setPreferenceFast }) =>
   (
     <div>
-      {/* <button onClick={this.props.locationFetchLocation}>Get Location</button> */}
-      <input type="radio" name="cheapOrFast" value="cheap" onClick={setPreferenceCheap} />
+      <GoeeyRadio height="100" width="100" selected={preference === 'cheap'} clicked={setPreferenceCheap} />
       Cheap<br />
-      <input type="radio" name="cheapOrFast" value="fast" onClick={setPreferenceFast} />
+      <GoeeyRadio height="100" width="100" selected={preference === 'fast'} clicked={setPreferenceFast} />
       Fast<br />
+
     </div>
   );
