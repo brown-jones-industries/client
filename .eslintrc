@@ -1,7 +1,0 @@
-{
-    "rules": {
-        "indent": ["error", 2, { "SwitchCase": 1 }],
-        "react/jsx-filename-extension": 0
-    },
-    "extends": "airbnb"
-}
