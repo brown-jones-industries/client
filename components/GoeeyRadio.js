@@ -2,7 +2,7 @@ import React from 'react';
 
 export default ({width, height, clicked, selected}) => {
   return (
-    <div>
+    <div className="radioButton">
       <svg
         width={width || 50}
         height={height || 50}
@@ -21,10 +21,10 @@ export default ({width, height, clicked, selected}) => {
           </filter>
         </defs>
 
-        <g id="radioContainer" className={selected ? 'selected' : ''} overflow="hidden" filter="url(#goo)" onClick={clicked}>
+        <g className={selected ? 'radioButtonInner selected' : 'radioButtonInner'} overflow="hidden" filter="url(#goo)" onClick={clicked}>
           <g
             id="clickLineGroup"
-            strokeWidth="5"
+            strokeWidth="6"
           >
             <path d="M 0    40 L 60 65 Z"/>
             <path d="M 35   0 L 60 65 Z"/>

@@ -2,6 +2,13 @@ html, body {
   width: 100%;
   height: 100%;
   margin: 0;
+  background-color:#03A9F4;
+}
+
+.centeredContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #background-container {
@@ -9,10 +16,10 @@ html, body {
   width: 100%;
 }
 .tab-container.activated {
-  background: grey;
-  height: 100px;
+  /*background: grey;*/
   width: 100%;
   display: block;
+  min-height: 300px;
 }
 .tab-container {
   display: none;
@@ -21,26 +28,51 @@ html, body {
 svg {
   display: inline-block;
 }
-
-#radioContainer circle {
-  fill: black;
+.radioContainer {
+  height: 100px;
+}
+.radioLabel {
+  font-size: 26px;
+  font-family: 'Ubuntu', sans-serif;
+  float: left;
+  height: 100%;
+  color: white;
+  opacity: .5;
+  
+  /*font-weight: bold;*/
+  /*letter-spacing: 5px;*/
+}
+.radioLabel.selected{
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+.radioButton {
+  /*display: inline-block;*/
+  float: left;
+  height: 100%;
+  max-width: 100px;
 }
 
-#radioContainer.selected circle {
+.radioButtonInner circle {
+  fill: white;
+}
+
+.radioButtonInner.selected circle {
+      /*scaleInnerOut .5s cubic-bezier(0.175, 0.885, 0.32, 1.275) .2s;*/
+
   transform-origin: 50% 50%;
-  animation: scaleInnerUp .5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s,
-    scaleInnerOut .5s cubic-bezier(0.175, 0.885, 0.32, 1.275) .2s;
+  animation: scaleInnerUp .5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s
 }
 
-#radioContainer.selected ellipse {
-  stroke: black;
+.radioButtonInner.selected ellipse {
+  stroke: white;
   stroke-width: 5px;
   transform-origin: 50% 50%;
   animation: squishOuter .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-#radioContainer.selected path {
-  stroke: black;
+.radioButtonInner.selected path {
+  stroke: white;
   stroke-dashoffset: -45;
   stroke-dasharray: 0, 1000%;
   animation: dashPart1 .5s linear 0s, dashPart2 .5s linear .5s;
@@ -70,7 +102,7 @@ svg {
 
 @keyframes scaleInnerUp {
   from {
-    transform: scaleY(2.5);
+    transform: scaleY(2);
   }
   to {
     transform: scaleY(1);
