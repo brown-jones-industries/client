@@ -20,7 +20,8 @@
     "dev": "node server",
     "build": "next build",
     "start": "NODE_ENV=production next build && node server",
-    "lint": "./node_modules/eslint/bin/eslint.js ."
+    "lint": "./node_modules/eslint/bin/eslint.js .",
+    "heroku-postbuild": "npm build"
   },
   "devDependencies": {
     "standard": "^10.0.3",
