@@ -14,7 +14,8 @@
     "redux": "^3.6.0",
     "redux-promise": "^0.5.3",
     "redux-promise-middleware": "^4.3.0",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "sw-precache-webpack-plugin": "^0.11.4"
   },
   "scripts": {
     "dev": "node server",
@@ -25,7 +26,6 @@
   },
   "devDependencies": {
     "standard": "^10.0.3",
-    "sw-precache-webpack-plugin": "^0.11.4"
   },
   "main": "server.js",
   "author": "Brady Brown <bobrown101@gmail.com>"
