@@ -1,13 +1,13 @@
 import React from "react";
 import { connect } from "react-redux";
 import GoeeyRadio from './GoeeyRadio';
-import AnimatedPiggy from './AnimatedPiggy';
+import NewAnimatedPiggy from './NewAnimatedPiggy';
 import RadioContainer from './RadioContainer';
 
 export default ({ preference, setPreferenceCheap, setPreferenceFast }) =>
   (
     <div>
-      <AnimatedPiggy />
+      <NewAnimatedPiggy />
       <RadioContainer
         height="100"
         width="100"

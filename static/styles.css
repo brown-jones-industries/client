@@ -14,6 +14,21 @@ html, body {
 #background-container {
   height: 100%;
   width: 100%;
+  overflow: hidden;
+}
+#BackgroundBubbleContainer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+#BackgroundBubble {
+  position: absolute;
+  height: 100px;
+  /* background: grey; */
+  border-radius: 100%;
+  bottom: 0;
+  animation: background-bubble-click 1s infinite linear;
 }
 .tab-container.activated {
   /*background: grey;*/
@@ -38,7 +53,7 @@ svg {
   height: 100%;
   color: white;
   opacity: .5;
-  
+
   /*font-weight: bold;*/
   /*letter-spacing: 5px;*/
 }
@@ -79,6 +94,73 @@ svg {
   animation-iteration-count: 1;
 }
 
+
+.animatedPiggyStars { /*will fade the stars in and out */
+  animation: fadeIn 1s linear 0s infinite alternate;
+}
+.staggerStars1{ /*will stagger the fade so it looks better */
+  animation-delay: .25s;
+}
+.staggerStars2{
+  animation-delay: .5s;
+}
+.staggerStars2{
+  animation-delay: .75s;
+}
+.animatedPiggyEyes { /*will open and close the eyes */
+  animation: twinkleEyes 10s infinite linear;
+}
+.animatedPiggyCoin {
+  animation: bounceCoin 1.5s infinite ease-in-out alternate;
+}
+.animatedPiggyCoinLines { /*make the coin look like its falling  */
+  animation: fallingTrails 1s infinite ease-in-out alternate;
+  /*stroke-dasharray: 33;*/
+}
+.animatedPiggyCoinLines.stagger1{
+  animation-delay: 0s;
+
+}
+.animatedPiggyCoinLines.stagger2{
+  animation-delay: 1.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+@keyframes bounceCoin { /*simulates a pause between fading in and out */
+  from {
+    transform: translate(100px, 7px);
+  }
+  to{
+    transform: translate(100px, 0px);
+  }
+}
+@keyframes twinkleEyes {
+    0%,10%,12%,18%,20%,22%,50%,52%,58%,60%,62% {
+        transform: scaleY(1) translateY(0)
+    }
+
+    11%,19%,21%,51%,59%,61% {
+        transform: scaleY(0) translateY(25%)
+    }
+}
+@keyframes fallingTrails {
+  from {
+    /*stroke-dashoffset: -33;*/
+    opacity: 1;
+  }
+  to {
+    /*stroke-dashoffset: 33;*/
+    opacity: .5;
+  }
+}
+
 @keyframes dashPart1 {
   from {
     stroke-dashoffset: -45;
@@ -87,6 +169,7 @@ svg {
   to {
     stroke-dasharray: 20, 1000%;
     stroke-dashoffset: -25;
+=
   }
 }
 @keyframes dashPart2 {

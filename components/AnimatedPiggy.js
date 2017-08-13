@@ -84,7 +84,7 @@ export default () => {
         }
         .piggyCoins {
           margin-bottom: -65%;
-          position: relative;
+          position: absolute;
           {/* transform: translateX(27px); */}
         }
         .animatedPiggyCoin {
