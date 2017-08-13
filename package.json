@@ -25,7 +25,7 @@
     "heroku-postbuild": "npm run build"
   },
   "devDependencies": {
-    "standard": "^10.0.3",
+    "standard": "^10.0.3"
   },
   "main": "server.js",
   "author": "Brady Brown <bobrown101@gmail.com>"
