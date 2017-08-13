@@ -25,6 +25,8 @@ class NewAnimatedPiggy extends React.Component {
           <g id='Body'>
             <path stroke='#6F214F' fill='#F5A0B5' strokeWidth='10' d='M91.4978173,136 C51.4583784,136 19,168.458378 19,208.497817 C19,248.537256 51.4583784,280.995635 91.4978173,280.995635 L162.502183,280.995635 C202.541622,280.995635 235,248.537256 235,208.497817 C235,168.458378 202.541622,136 162.502183,136 L91.4978173,136 Z' />
           </g>
+          <path transform='translate(40.000000, 160.000000)' d='M34,5 C17.9837423,5 5,17.9837423 5,34' id='body-highlight' stroke='#FBD2DA' strokeWidth='10' strokeLinecap='round' />
+
           <g id='bottom' transform='translate(16.000000, 234.000000)'>
             <rect id='Rectangle-9' fill='#F3A0B2' x='40' y='25' width='17' height='27' />
             <rect id='Rectangle-11' fill='#F3A0B2' x='36' y='47' width='24' height='22' />
@@ -65,8 +67,8 @@ class NewAnimatedPiggy extends React.Component {
             <path d='M12.8892302,70.582608 C8.70173058,73.7800747 6,78.8245258 6,84.5 C6,94.1649831 13.8350169,102 23.5,102 C30.3154895,102 36.2209924,98.1038844 39.1107698,92.417392 C36.1672153,94.6650143 32.489509,96 28.5,96 C18.8350169,96 11,88.1649831 11,78.5 C11,75.6505063 11.6810408,72.9600783 12.8892302,70.582608 Z' id='Combined-Shape' fill='#FFE33D' />
             <path d='M28,62.4500815 L28,62.4500815 M23.5,62 C11.0735931,62 1,72.0735931 1,84.5 C1,96.9264069 11.0735931,107 23.5,107 C35.9264069,107 46,96.9264069 46,84.5' id='Combined-Shape' stroke='#6C1A4A' strokeWidth='10' strokeLinecap='round' transform='translate(23.500000, 84.500000) rotate(-15.000000) translate(-23.500000, -84.500000) ' />
             <rect id='Rectangle-14' fill='#6C1A4A' x='18' y='0' width='10' height='79' rx='5' />
-            <path className='animatedPiggyCoinLines stagger' d="M4.5,29 L4.5,55.0058955" id="Path-2" stroke="#6C1A4A" strokeWidth="9" strokeLinecap="round"></path>
-            <path className='animatedPiggyCoinLines stagger2' d="M42.5,16 L42.5,48.0910908" id="Path-3" stroke="#6C1A4A" strokeWidth="9" strokeLinecap="round" strokeLinejoin="round"></path>
+            <path className='animatedPiggyCoinLines stagger' d='M4.5,29 L4.5,55.0058955' id='Path-2' stroke='#6C1A4A' strokeWidth='9' strokeLinecap='round' />
+            <path className='animatedPiggyCoinLines stagger2' d='M42.5,16 L42.5,48.0910908' id='Path-3' stroke='#6C1A4A' strokeWidth='9' strokeLinecap='round' strokeLinejoin='round' />
 
           </g>
           <g id='star-group-1' transform='translate(22.000000, 210.000000)' fill='#FFFFFF'>
