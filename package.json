@@ -19,7 +19,7 @@
   "scripts": {
     "dev": "node server",
     "build": "next build",
-    "start": "NODE_ENV=production node server",
+    "start": "NODE_ENV=production next build && node server",
     "lint": "./node_modules/eslint/bin/eslint.js ."
   },
   "devDependencies": {
