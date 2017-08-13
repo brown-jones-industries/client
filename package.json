@@ -21,7 +21,7 @@
     "build": "next build",
     "start": "NODE_ENV=production next build && node server",
     "lint": "./node_modules/eslint/bin/eslint.js .",
-    "heroku-postbuild": "npm build"
+    "heroku-postbuild": "npm run build"
   },
   "devDependencies": {
     "standard": "^10.0.3",
