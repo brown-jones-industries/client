@@ -48,7 +48,9 @@ class Index extends React.Component {
         <TabPage tabID={3}>
           <NumberOfPeople />
         </TabPage>
-        <NavigationBar />
+        <div className='columns'>
+          <NavigationBar />
+        </div>
       </Background>
     );
   }

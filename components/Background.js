@@ -12,8 +12,12 @@ class Background extends React.Component {
   };
   render () {
     return (
-      <div id='background-container'>
-        {this.props.children}
+      <div className='container'>
+        <div id='background-container' className='hero is-fullheight '>
+          <div className='hero-body'>
+            {this.props.children}
+          </div>
+        </div>
       </div>
     )
   }

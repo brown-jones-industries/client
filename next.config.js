@@ -1,5 +1,5 @@
-const path = require('path')
-const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
+const path = require("path");
+const SWPrecacheWebpackPlugin = require("sw-precache-webpack-plugin");
 
 module.exports = {
   webpack: (config, { dev }) => {
@@ -8,21 +8,21 @@ module.exports = {
      * on our main entry file :)
      * Reason: https://github.com/ooade/NextSimpleStarter/issues/32
      */
-    const oldEntry = config.entry
+    const oldEntry = config.entry;
 
     config.entry = () =>
       oldEntry().then((entry) => {
-        entry['main.js'].push(path.resolve('./utils/offline'))
-        return entry
-      })
+        entry["main.js"].push(path.resolve("./utils/offline"));
+        return entry;
+      });
 
     /* Enable only in Production */
     if (!dev) {
       // Service Worker
       config.plugins.push(
         new SWPrecacheWebpackPlugin({
-          cacheId: 'next-ss',
-          filename: 'sw.js',
+          cacheId: "next-ss",
+          filename: "sw.js",
           minify: true,
           staticFileGlobsIgnorePatterns: [/\.next\//],
           staticFileGlobs: [
@@ -32,17 +32,17 @@ module.exports = {
             // Example with different handlers
             {
               handler: 'fastest',
-              urlPattern: /[.](png|jpg|css)/
+              urlPattern: /[.](png|jpg|css)/,
             },
             {
               handler: 'networkFirst',
-              urlPattern: /^http.*/ // cache all files
-            }
-          ]
-        })
-      )
+              urlPattern: /^http.*/, // cache all files
+            },
+          ],
+        }),
+      );
     }
 
-    return config
-  }
-}
+    return config;
+  },
+};

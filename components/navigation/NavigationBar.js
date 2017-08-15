@@ -16,7 +16,7 @@ class NavigationBar extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='column'>
         <NavigationButton
           setTab={this.setTab}
           tabNumber={0}

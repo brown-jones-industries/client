@@ -2,7 +2,8 @@ html, body {
   width: 100%;
   height: 100%;
   margin: 0;
-  background-color:#03A9F4;
+  /*background-color:#03A9F4;*/
+  color: grey;
 }
 
 .centeredContent {
@@ -51,7 +52,6 @@ svg {
   font-family: 'Ubuntu', sans-serif;
   float: left;
   height: 100%;
-  color: white;
   opacity: .5;
 
   /*font-weight: bold;*/
@@ -69,7 +69,7 @@ svg {
 }
 
 .radioButtonInner circle {
-  fill: white;
+  fill: grey;
 }
 
 .radioButtonInner.selected circle {
@@ -80,7 +80,7 @@ svg {
 }
 
 .radioButtonInner.selected ellipse {
-  stroke: white;
+  stroke: grey;
   stroke-width: 5px;
   transform-origin: 50% 50%;
   animation: squishOuter .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -135,10 +135,10 @@ svg {
 }
 @keyframes bounceCoin { /*simulates a pause between fading in and out */
   from {
-    transform: translate(100px, 7px);
+    transform: translate(80px, 7px);
   }
   to{
-    transform: translate(100px, 0px);
+    transform: translate(80px, 0px);
   }
 }
 @keyframes twinkleEyes {
@@ -165,10 +165,13 @@ svg {
   from {
     stroke-dashoffset: -45;
     stroke-dasharray: 1, 1000%;
+    stroke: grey;
   }
   to {
     stroke-dasharray: 20, 1000%;
     stroke-dashoffset: -25;
+    stroke: grey;
+
 =
   }
 }
@@ -176,10 +179,14 @@ svg {
   from {
     stroke-dasharray: 20, 1000%;
     stroke-dashoffset: -25;
+    stroke: grey;
+
   }
   to {
     stroke-dasharray: 0, 1000%;
     stroke-dashoffset: -25;
+    stroke: grey;
+
   }
 }
 
