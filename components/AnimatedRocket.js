@@ -105,14 +105,16 @@ export default () => {
         }
 
         .shootingstar{
-          animation: shootingstars 1s linear infinite;
+          animation: shootingstars 2.7s ease-out infinite 0s;
         }
 
         .stargroup3{
-          animation-delay: .5s;
+          animation-delay: .33s;
+          animation-duration: 3s;
         }
-        .stargroup3{
-          animation-delay: .2s;
+        .stargroup2{
+          animation-delay: 0s;
+          animation-duration: 4s;
         }
 
 
@@ -141,21 +143,13 @@ export default () => {
         }
         @keyframes shootingstars {
           0% {
-              transform: translateY(calc( 100% + 300px ));
+              transform: translateY(750px);
               opacity: 1;
           }
-          80% {
-              transform: translateY(-100px);
-              /*opacity: .8;*/
-          }
-          95% {
-            transform: translateY(-120px);
-            /*opacity: 0;*/
 
-          }
           100% {
-            transform: translateY(-130px);
-            opacity: 0;
+            transform: translateY(-750px);
+            opacity: .5;
 
           }
         }
