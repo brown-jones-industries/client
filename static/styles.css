@@ -5,7 +5,9 @@ html, body {
   /*background-color:#03A9F4;*/
   color: grey;
 }
-
+.hidden {
+  display: none !important;
+}
 .centeredContent {
   display: flex;
   align-items: center;

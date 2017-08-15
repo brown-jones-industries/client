@@ -4,7 +4,7 @@ class NewAnimatedPiggy extends React.Component {
   render () {
     return (
 
-      <svg width='279px' height='312px' viewBox='0 0 279 312' version='1.1'>
+      <svg width={this.props.width || '280px'} height={this.props.height || '315px'} viewBox='0 0 280 315' version='1.1' transform='rotate(45deg)'>
         <desc>Created with Sketch.</desc>
         <defs>
           <path d='M91.4978173,131 L162.502183,131 L162.502183,131 C205.303045,131 240,165.696955 240,208.497817 L240,208.497817 L240,208.497817 C240,251.29868 205.303045,285.995635 162.502183,285.995635 L91.4978173,285.995635 L91.4978173,285.995635 C48.6969546,285.995635 14,251.29868 14,208.497817 L14,208.497817 L14,208.497817 C14,165.696955 48.6969546,131 91.4978173,131 Z' id='path-1' />

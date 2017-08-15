@@ -13,7 +13,7 @@ class TabPage extends React.Component {
   render() {
     const tabActivated = (this.props.navigation.currentTab == this.props.tabID ? 'activated' : '');
     return (
-      <div className={'tab-container section ' + tabActivated}>
+      <div className={'tab-container' + tabActivated}>
         {this.props.children}
       </div>
     );

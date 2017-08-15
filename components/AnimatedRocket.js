@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default () => {
+export default ({height, width}) => {
   return (
     <div className='animatedRocketContainer'>
-      <svg className='animatedRocket' width='814px' height='753px' viewBox='0 0 814 753' version='1.1'>
+      <svg className='animatedRocket' width={width} height={height} viewBox='0 0 814 753' version='1.1'>
         <title>space-rocket</title>
         <defs>
           <linearGradient x1='34.714023%' y1='31.1630668%' x2='-83.854154%' y2='73.3137146%' id='linearGradient-1'>
