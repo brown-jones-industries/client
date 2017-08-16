@@ -4,13 +4,13 @@ class NewAnimatedPiggy extends React.Component {
   render () {
     return (
 
-      <svg width={this.props.width || '280px'} height={this.props.height || '315px'} viewBox='0 0 280 315' version='1.1' transform='rotate(45deg)'>
+      <svg width={this.props.width || '280px'} height={this.props.height || '315px'} viewBox='0 0 280 315' version='1.1'>
         <desc>Created with Sketch.</desc>
         <defs>
           <path d='M91.4978173,131 L162.502183,131 L162.502183,131 C205.303045,131 240,165.696955 240,208.497817 L240,208.497817 L240,208.497817 C240,251.29868 205.303045,285.995635 162.502183,285.995635 L91.4978173,285.995635 L91.4978173,285.995635 C48.6969546,285.995635 14,251.29868 14,208.497817 L14,208.497817 L14,208.497817 C14,165.696955 48.6969546,131 91.4978173,131 Z' id='path-1' />
           <rect id='path-2' x='0' y='0' width='93' height='63' rx='31.5' />
         </defs>
-        <g id='Page-1' stroke='none' strokeWidth='1' fill='none' fill-rule='evenodd'>
+        <g id='Page-1' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
           <g id='tail' transform='translate(-2.000000, 128.000000)'>
             <rect id='Rectangle-4' fill='#6F214F' transform='translate(24.081475, 32.081475) rotate(-45.000000) translate(-24.081475, -32.081475) ' x='19.0814755' y='18.5814755' width='10' height='27' rx='5' />
             <rect id='Rectangle-4' fill='#6F214F' transform='translate(15.604446, 34.558505) rotate(45.000000) translate(-15.604446, -34.558505) ' x='10.6044462' y='17.5554564' width='10' height='34.0060967' rx='5' />
@@ -46,7 +46,7 @@ class NewAnimatedPiggy extends React.Component {
           </g>
           <g id='nose' transform='translate(169.000000, 223.000000)'>
             <g id='Rectangle'>
-              <use fill='#FAD4D0' fill-rule='evenodd' href='#path-2' />
+              <use fill='#FAD4D0' fillRule='evenodd' href='#path-2' />
               <rect stroke='#6F214F' strokeWidth='10' x='5' y='5' width='83' height='53' rx='26.5' />
             </g>
             <rect id='Rectangle-2' fill='#6C1A4A' x='28' y='21' width='9' height='21' rx='4.5' />
@@ -74,13 +74,13 @@ class NewAnimatedPiggy extends React.Component {
           </g>
           <g id='star-group-1' transform='translate(22.000000, 210.000000)' fill='#FFFFFF'>
             <circle className='animatedPiggyStars staggerStars1' id='Oval-6' cx='35.5' cy='24.5' r='3.5' />
-            <path className='animatedPiggyStars staggerStars2' d='M25.0223548,20 C24.7276296,14.6162231 20.394273,10.3079917 15,10.0530209 L15,10.0291446 C20.4216854,9.77287816 24.7716443,5.4220511 25.0265346,5.655008e-06 L25.050153,0 C25.3038407,5.3964628 29.6140361,9.73178852 35,10.0252432 L35,10.0569224 C29.641397,10.3488863 25.3476603,14.6417599 25.0543331,20 L25.0223548,20 Z' id='star' fill-rule='nonzero' />
-            <path className='animatedPiggyStars staggerStars3' d='M12.5279434,40 C12.159537,33.2702789 6.74284127,27.8849897 1.7069679e-14,27.5662762 L0,27.5364308 C6.77710669,27.2160977 12.2145554,21.7775639 12.5331683,15.0000071 L12.5626912,15 C12.8798008,21.7455785 18.2675452,27.1647356 25,27.531554 L25,27.571153 C18.3017462,27.9361079 12.9345753,33.3021999 12.5679164,40 L12.5279434,40 Z' id='star' fill-rule='nonzero' />
+            <path className='animatedPiggyStars staggerStars2' d='M25.0223548,20 C24.7276296,14.6162231 20.394273,10.3079917 15,10.0530209 L15,10.0291446 C20.4216854,9.77287816 24.7716443,5.4220511 25.0265346,5.655008e-06 L25.050153,0 C25.3038407,5.3964628 29.6140361,9.73178852 35,10.0252432 L35,10.0569224 C29.641397,10.3488863 25.3476603,14.6417599 25.0543331,20 L25.0223548,20 Z' id='star' fillRule='nonzero' />
+            <path className='animatedPiggyStars staggerStars3' d='M12.5279434,40 C12.159537,33.2702789 6.74284127,27.8849897 1.7069679e-14,27.5662762 L0,27.5364308 C6.77710669,27.2160977 12.2145554,21.7775639 12.5331683,15.0000071 L12.5626912,15 C12.8798008,21.7455785 18.2675452,27.1647356 25,27.531554 L25,27.571153 C18.3017462,27.9361079 12.9345753,33.3021999 12.5679164,40 L12.5279434,40 Z' id='star' fillRule='nonzero' />
           </g>
           <g id='star-group-2' transform='translate(238.000000, 119.000000)' fill='#6F214F'>
             <circle className='animatedPiggyStars staggerStars3' id='Oval-6' cx='3.5' cy='41.5' r='3.5' />
-            <path className='animatedPiggyStars staggerStars2' d='M21.042474,38 C20.4824963,27.7708239 12.2491187,19.5851843 2,19.1007398 L2,19.0553748 C12.3012022,18.5684685 20.5661242,10.3018971 21.0504158,1.07445152e-05 L21.0952907,0 C21.5772973,10.2532793 29.7666687,18.4903982 40,19.047962 L40,19.1081526 C29.8186543,19.662884 21.6605545,27.8193439 21.1032329,38 L21.042474,38 Z' id='star' fill-rule='nonzero' />
-            <path className='animatedPiggyStars staggerStars1' d='M31.0223548,65 C30.7276296,59.6162231 26.394273,55.3079917 21,55.0530209 L21,55.0291446 C26.4216854,54.7728782 30.7716443,50.4220511 31.0265346,45.0000057 L31.050153,45 C31.3038407,50.3964628 35.6140361,54.7317885 41,55.0252432 L41,55.0569224 C35.641397,55.3488863 31.3476603,59.6417599 31.0543331,65 L31.0223548,65 Z' id='star' fill-rule='nonzero' />
+            <path className='animatedPiggyStars staggerStars2' d='M21.042474,38 C20.4824963,27.7708239 12.2491187,19.5851843 2,19.1007398 L2,19.0553748 C12.3012022,18.5684685 20.5661242,10.3018971 21.0504158,1.07445152e-05 L21.0952907,0 C21.5772973,10.2532793 29.7666687,18.4903982 40,19.047962 L40,19.1081526 C29.8186543,19.662884 21.6605545,27.8193439 21.1032329,38 L21.042474,38 Z' id='star' fillRule='nonzero' />
+            <path className='animatedPiggyStars staggerStars1' d='M31.0223548,65 C30.7276296,59.6162231 26.394273,55.3079917 21,55.0530209 L21,55.0291446 C26.4216854,54.7728782 30.7716443,50.4220511 31.0265346,45.0000057 L31.050153,45 C31.3038407,50.3964628 35.6140361,54.7317885 41,55.0252432 L41,55.0569224 C35.641397,55.3488863 31.3476603,59.6417599 31.0543331,65 L31.0223548,65 Z' id='star' fillRule='nonzero' />
           </g>
         </g>
       </svg>

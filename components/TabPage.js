@@ -1,25 +1,9 @@
-import React from "react";
-import { connect } from "react-redux";
+import React from 'react'
 
-
-class TabPage extends React.Component {
-
-    constructor(props){
-      super(props);
-
-    };
-
-
-  render() {
-    const tabActivated = (this.props.navigation.currentTab == this.props.tabID ? 'activated' : '');
-    return (
-      <div className={'tab-container' + tabActivated}>
-        {this.props.children}
-      </div>
-    );
-  }
+export default ({ selected, children }) => {
+  return (
+    <div className={selected ? 'tab-container activated' : 'tab-container '}>
+      {children}
+    </div>
+  )
 }
-
-export default connect(({ navigation }) => ({ navigation }), {
-
-})(TabPage);

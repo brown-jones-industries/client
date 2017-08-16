@@ -1,6 +1,6 @@
-export function currentTab(index) {
+export function setTab (index) {
   return {
     type: 'CURRENT_TAB',
-    payload: index,
-  };
+    payload: index
+  }
 }

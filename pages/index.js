@@ -1,15 +1,8 @@
 import 'isomorphic-fetch'
 import React from 'react'
 import withRedux from 'next-redux-wrapper'
-
-import Todo from '../components/Todo'
-import PreferenceContainer from '../containers/PreferenceContainer'
 import Background from '../components/Background'
-import TabPage from '../components/TabPage'
-import NumberOfPeople from '../containers/NumberOfPeople'
-
-import NavigationBar from '../components/navigation/NavigationBar'
-import LocationButton from '../components/LocationButton'
+import Navigation from '../containers/Navigation'
 
 import initStore from '../utils/store'
 
@@ -36,21 +29,7 @@ class Index extends React.Component {
     // const { stars } = this.props;
     return (
       <Background>
-        <TabPage tabID={0}>
-          <PreferenceContainer />
-        </TabPage>
-        <TabPage tabID={1}>
-          <LocationButton />
-        </TabPage>
-        <TabPage tabID={2}>
-          <Todo />
-        </TabPage>
-        <TabPage tabID={3}>
-          <NumberOfPeople />
-        </TabPage>
-        <div>
-          <NavigationBar />
-        </div>
+        <Navigation />
       </Background>
     )
   }

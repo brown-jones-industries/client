@@ -1,5 +1,4 @@
 import React from 'react'
-
 class HiddenComponent extends React.Component {
   render () {
     return (

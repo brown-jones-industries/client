@@ -1,0 +1,231 @@
+@import 'normalize.css';
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+$primary-color: black;
+
+p {
+  font-size: xx-large;
+  color: $primary-color;
+  font-weight: bold;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  /*background-color:#03A9F4;*/
+  color: grey;
+}
+.hidden {
+  display: none !important;
+}
+.centeredContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#background-container {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+#BackgroundBubbleContainer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+#BackgroundBubble {
+  position: absolute;
+  height: 100px;
+  /* background: grey; */
+  border-radius: 100%;
+  bottom: 0;
+  animation: background-bubble-click 1s infinite linear;
+}
+.tab-container.activated {
+  /*background: grey;*/
+  width: 100%;
+  display: block;
+  min-height: 300px;
+}
+.tab-container {
+  display: none;
+}
+
+svg {
+  display: inline-block;
+}
+.radioContainer {
+  height: 100px;
+}
+.radioLabel {
+  font-size: 26px;
+  font-family: 'Ubuntu', sans-serif;
+  float: left;
+  height: 100%;
+  opacity: .5;
+
+  /*font-weight: bold;*/
+  /*letter-spacing: 5px;*/
+}
+.radioLabel.selected{
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+.radioButton {
+  /*display: inline-block;*/
+  float: left;
+  height: 100%;
+  max-width: 100px;
+}
+
+.radioButtonInner circle {
+  fill: grey;
+}
+
+.radioButtonInner.selected circle {
+      /*scaleInnerOut .5s cubic-bezier(0.175, 0.885, 0.32, 1.275) .2s;*/
+
+  transform-origin: 50% 50%;
+  animation: scaleInnerUp .5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s
+}
+
+.radioButtonInner.selected ellipse {
+  stroke: grey;
+  stroke-width: 5px;
+  transform-origin: 50% 50%;
+  animation: squishOuter .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.radioButtonInner.selected path {
+  stroke: white;
+  stroke-dashoffset: -45;
+  stroke-dasharray: 0, 1000%;
+  animation: dashPart1 .5s linear 0s, dashPart2 .5s linear .5s;
+  animation-iteration-count: 1;
+}
+
+
+.animatedPiggyStars { /*will fade the stars in and out */
+  animation: fadeIn 1s linear 0s infinite alternate;
+}
+.staggerStars1{ /*will stagger the fade so it looks better */
+  animation-delay: .25s;
+}
+.staggerStars2{
+  animation-delay: .5s;
+}
+.staggerStars2{
+  animation-delay: .75s;
+}
+.animatedPiggyEyes { /*will open and close the eyes */
+  animation: twinkleEyes 10s infinite linear;
+}
+.animatedPiggyCoin {
+  animation: bounceCoin 1.5s infinite ease-in-out alternate;
+}
+.animatedPiggyCoinLines { /*make the coin look like its falling  */
+  animation: fallingTrails 1s infinite ease-in-out alternate;
+  /*stroke-dasharray: 33;*/
+}
+.animatedPiggyCoinLines.stagger1{
+  animation-delay: 0s;
+
+}
+.animatedPiggyCoinLines.stagger2{
+  animation-delay: 1.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+@keyframes bounceCoin { /*simulates a pause between fading in and out */
+  from {
+    transform: translate(80px, 7px);
+  }
+  to{
+    transform: translate(80px, 0px);
+  }
+}
+@keyframes twinkleEyes {
+    0%,10%,12%,18%,20%,22%,50%,52%,58%,60%,62% {
+        transform: scaleY(1) translateY(0)
+    }
+
+    11%,19%,21%,51%,59%,61% {
+        transform: scaleY(0) translateY(25%)
+    }
+}
+@keyframes fallingTrails {
+  from {
+    /*stroke-dashoffset: -33;*/
+    opacity: 1;
+  }
+  to {
+    /*stroke-dashoffset: 33;*/
+    opacity: .5;
+  }
+}
+
+@keyframes dashPart1 {
+  from {
+    stroke-dashoffset: -45;
+    stroke-dasharray: 1, 1000%;
+    stroke: grey;
+  }
+  to {
+    stroke-dasharray: 20, 1000%;
+    stroke-dashoffset: -25;
+    stroke: grey;
+  }
+}
+@keyframes dashPart2 {
+  from {
+    stroke-dasharray: 20, 1000%;
+    stroke-dashoffset: -25;
+    stroke: grey;
+
+  }
+  to {
+    stroke-dasharray: 0, 1000%;
+    stroke-dashoffset: -25;
+    stroke: grey;
+
+  }
+}
+
+@keyframes scaleInnerUp {
+  from {
+    transform: scaleY(2);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+@keyframes scaleInnerOut {
+  from {
+    transform: scaleX(2);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes squishOuter {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1, .5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
