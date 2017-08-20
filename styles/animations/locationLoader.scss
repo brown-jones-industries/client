@@ -1,0 +1,210 @@
+$animationLength: 3s;
+$markerFadeOutLength: .5s;
+$checkmarkAnimationLength: 2s;
+$successColorChangeLength: .25s;
+$hasErroredColorChangeLength: .25s;
+$checkmarkStroke: 30px;
+$failStrokeWidth: 30px;
+$failStrokeColor: white;
+$failAnimationLength: 1s;
+$successFillColor: #8bc34a;
+$hasErroredFillColor: #ff5722;
+$markerStroke: #979797;
+$markerFill: #D8D8D8;
+
+.animated-location-loader {
+  overflow: visible !important;
+}
+.animated-location-loader #outer-1, .animated-location-loader #outer-2{
+  // stroke-width: 10px;
+}
+.animated-location-loader.success #outer-1, .animated-location-loader.success #outer-2{
+  fill: $successFillColor;
+  animation: successFadeIn $successColorChangeLength linear;
+}
+.animated-location-loader.hasErrored #outer-1, .animated-location-loader.hasErrored #outer-2{
+  fill: $hasErroredFillColor;
+  animation: hasErroredFadeIn $hasErroredColorChangeLength linear;
+}
+.animated-location-loader .marker{
+  stroke: $markerStroke;
+  fill: $markerFill;
+}
+.animated-location-loader.hasErrored .marker, .animated-location-loader.success .marker {
+  fill: none;
+  stroke: none;
+}
+.animated-location-loader.isLoading .marker {
+  transform-origin: 50% 50%;
+  animation: popUpSlamDown $animationLength infinite linear;
+}
+.animated-location-loader.success .marker, .animated-location-loader.hasErrored .marker {
+  transform-origin: 50% 50%;
+  animation: scaleOut $markerFadeOutLength linear;
+}
+.animated-location-loader.isLoading #ping-ring{
+  transform-origin: 50% 50%;
+  fill: rgba(0,0,0,.01);
+
+  animation: scaleFadeOut $animationLength infinite linear ($animationLength / 6);
+}
+.animated-location-loader.isLoading #ping-ring2{
+  transform-origin: 50% 50%;
+  fill: rgba(0,0,0,.01);
+  animation: scaleFadeOut $animationLength infinite linear ($animationLength / 4);
+}
+
+.animated-location-loader #yes-1, .animated-location-loader #yes-2{
+  stroke-dasharray: 0%, 1000%;
+  stroke-width: 0;
+  transform-origin: 50% 50%;
+  fill: none;
+}
+.animated-location-loader.success #yes-1, .animated-location-loader.success #yes-2{
+  stroke-width: $checkmarkStroke;
+  stroke-dasharray: 100%, 1000%;
+  stroke: white;
+}
+.animated-location-loader.success #yes-1{
+  animation: fillIn1 $checkmarkAnimationLength linear;
+}
+.animated-location-loader.success #yes-2{
+  animation: fillIn2 $checkmarkAnimationLength linear;
+}
+
+.animated-location-loader #No{
+  stroke-width: 0;
+}
+.animated-location-loader.hasErrored #No{
+  stroke-width: $failStrokeWidth;
+  stroke: $failStrokeColor;
+  animation: displayNo $failAnimationLength linear;
+}
+
+@keyframes popUpSlamDown{
+  0%{
+    transform: scale(1);
+  }
+  10%{
+    transform: scale(1.3);
+  }
+  20%{
+    transform: scale(1);
+  }
+  25%{
+    transform: scale(1.1) ;
+  }
+  30%{
+    transform: scale(1) ;
+  }
+  33%{
+    transform: scale(1.05) ;
+  }
+  35%{
+    transform: scale(1) ;
+  }
+
+}
+
+@keyframes scaleFadeOut{
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to{
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes fillIn1{
+  0%{
+    // stroke-dashoffset: -45;
+    stroke-dasharray: 0, 1000%;
+    // transform: scale(.5);
+    // opacity: 0;
+  }
+  50%{
+    // stroke-dashoffset: 0;
+    stroke-dasharray: 100%, 1000%;
+  }
+  100%{
+    stroke-dasharray: 100%, 1000%;
+
+  }
+}
+
+@keyframes fillIn2{
+  0%{
+    stroke-dasharray: 0, 10000%;
+    stroke-width: 0px;
+
+  }
+  15%{
+    // stroke-dashoffset: -45;
+    stroke-dasharray: 0, 10000%;
+    stroke-width: $checkmarkStroke;
+    // transform: scale(.5);
+    // opacity: 0;
+  }
+  50%{
+    // stroke-dashoffset: 0;
+    stroke-dasharray: 100%, 1000%;
+    stroke-width: $checkmarkStroke;
+  }
+  100%{
+    // stroke-dashoffset: 0;
+    stroke-dasharray: 100%, 1000%;
+    stroke-width: $checkmarkStroke;
+  }
+}
+
+@keyframes displayNo{
+  from{
+    stroke-width: $failStrokeWidth * 3;
+    transform: translate(110px, 0px) scale(0);
+    transform-origin: 50% 50%;
+  }
+  to{
+    stroke-width: $failStrokeWidth;
+    transform: translate(110px, 0px) scale(1);
+    transform-origin: 50% 50%;
+  }
+}
+
+@keyframes successFadeIn{
+  from{
+    opacity: 0;
+    fill: transparent;
+  }
+  to{
+    opacity: 1;
+    fill: $successFillColor;
+  }
+}
+@keyframes hasErroredFadeIn{
+  from{
+    opacity: 0;
+    fill: transparent;
+  }
+  to{
+    opacity: 1;
+    fill: $hasErroredFillColor;
+  }
+}
+@keyframes scaleOut{
+  from{
+    opacity: 1;
+    // transform: scale(1);
+    stroke: $markerStroke;
+    fill: $markerFill;
+
+  }
+  to{
+    opacity: 0;
+    // transform: scale(0);
+    stroke: none;
+    fill: $markerFill;
+
+  }
+}
