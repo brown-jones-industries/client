@@ -1,6 +1,8 @@
 const path = require('path')
 const glob = require('glob')
 
+const DashboardPlugin = require('webpack-dashboard/plugin')
+
 module.exports = {
   webpack: (config, { dev }) => {
     config.module.rules.push(
@@ -31,6 +33,8 @@ module.exports = {
         ]
       }
     )
+
+    config.plugins.push(new DashboardPlugin())
     return config
   }
 }

@@ -20,17 +20,25 @@ class LocationButton extends React.Component {
     }
     return (
       <div>
-        <button onClick={this.props.locationFetchLocation}>Get Location</button>
-        <AnimatedLocationLoader
-          height='300'
-          width='300'
-          hasErrored={this.props.location.locationHasErrored}
-          isLoading={this.props.location.locationIsLoading}
-          location={this.props.location.location}
-        />
-        <label>
-          {locationlabel}
-        </label>
+        <div className='row'>
+          <div className='col align-self-center'>
+            <AnimatedLocationLoader
+              height='300'
+              width='300'
+              hasErrored={this.props.location.locationHasErrored}
+              isLoading={this.props.location.locationIsLoading}
+              location={this.props.location.location}
+            />
+          </div>
+        </div>
+
+        <div className='row text-center'>
+          <div className='btn btn btn-outline-secondary col align-self-center' onClick={this.props.locationFetchLocation}>Get Location</div>
+        </div>
+
+        <div className='row text-center'>
+          <h3>{locationlabel}</h3>
+        </div>
       </div>
     )
   }

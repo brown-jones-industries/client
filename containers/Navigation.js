@@ -18,20 +18,36 @@ class Navigation extends React.Component {
     let that = this
 
     return (
-      <div className='row justify-content-md-center'>
-        <div className='card text-center col-sm-8r'>
+      <div>
+        <div className='row justify-content-md-center'>
+
           {tabs.map(function (tabContent, index) {
             return (
               <TabPage key={index} selected={that.props.navigation.currentTab === index}>
-                {tabContent}
+                <div className='col-sm-12'>
+                  <div className='card text-center'>
+                    <div className='card-body'>
+                      {tabContent}
+                    </div>
+                  </div>
+                </div>
               </TabPage>
             )
           })}
-          <div className='card-footer border-success bg-transparent '>
-            <NavigationBar setTab={this.props.setTab} numTabs={tabs.length} />
+
+        </div>
+
+        <div className='row justify-content-md-center'>
+          <div className='col'>
+            <NavigationBar
+              setTab={this.props.setTab}
+              numTabs={tabs.length}
+              currentTab={that.props.navigation.currentTab} />
           </div>
         </div>
+
       </div>
+
     )
   }
  }

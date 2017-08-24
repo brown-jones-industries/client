@@ -1,7 +1,15 @@
 import React from 'react'
 import NavigationButton from './NavigationButton'
 
-export default ({setTab, numTabs}) => {
+function nextTabNum (currentTab, numTabs) {
+  if (currentTab >= (numTabs - 1)) {
+    return 0
+  } else {
+    return currentTab + 1
+  }
+}
+
+export default ({setTab, numTabs, currentTab}) => {
   let tabs = []
   for (let i = 0; i < numTabs; i++) {
     tabs.push(<NavigationButton
@@ -12,9 +20,15 @@ export default ({setTab, numTabs}) => {
     />)
   }
 
+  let tabNum = nextTabNum(currentTab, numTabs)
+
+  // <div>
+  //   {tabs}
+  // </div>
   return (
-    <div>
-      {tabs}
+    <div className='btn-group' role='group' aria-label='Basic example'>
+      <button className='btn btn-outline-secondary fa fa-chevron-left' onClick={() => setTab(currentTab - 1)} />
+      <button className='btn btn-primary col-sm-12' onClick={() => setTab(tabNum)}>Next</button>
     </div>
   )
 }

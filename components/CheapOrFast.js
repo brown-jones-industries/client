@@ -10,6 +10,9 @@ import HiddenComponent from './HiddenComponent'
 export default ({ preference, setPreferenceCheap, setPreferenceFast }) =>
   (
     <div>
+      <div className='card-header bg-transparent'>
+      <h1 className='card-title'><strong>Do you want the cheapest or fastest ride?</strong></h1>
+      </div>
       <HiddenComponent hidden={preference !== 'cheap'}>
         <NewAnimatedPiggy height='400px' width='400px' />
       </HiddenComponent>

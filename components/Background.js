@@ -12,7 +12,7 @@ class Background extends React.Component {
   };
   render () {
     return (
-      <div id='background-container'>
+      <div className='container' id='background-container'>
         {this.props.children}
       </div>
     )

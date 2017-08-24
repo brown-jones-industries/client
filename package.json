@@ -37,7 +37,9 @@
     "heroku-postbuild": "npm run build"
   },
   "devDependencies": {
-    "standard": "^10.0.3"
+    "eslint-plugin-import": "^2.7.0",
+    "standard": "^10.0.3",
+    "webpack-dashboard": "^1.0.0-4"
   },
   "main": "server.js",
   "author": "Brady Brown <bobrown101@gmail.com>"

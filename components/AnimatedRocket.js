@@ -3,7 +3,7 @@ import React from 'react'
 export default ({height, width}) => {
   return (
     <div className='animatedRocketContainer'>
-      <svg className='animatedRocket' width={width} height={height} viewBox='0 0 814 753' version='1.1'>
+      <svg className='animatedRocket' width={width} height={height} viewBox='0 0 500 900' version='1.1'>
         <title>space-rocket</title>
         <defs>
           <linearGradient x1='34.714023%' y1='31.1630668%' x2='-83.854154%' y2='73.3137146%' id='linearGradient-1'>
@@ -90,7 +90,7 @@ export default ({height, width}) => {
       <style jsx>{`
 
         .rocketship {
-          animation-name: spaceboots;
+          /*animation-name: spaceboots;*/
           animation-duration: 0.3s;
           transform-origin:50% 50%;
           animation-iteration-count: infinite;
@@ -100,12 +100,12 @@ export default ({height, width}) => {
         .animatedRocketTrail path {
           stroke-dasharray: 20, 10%;
 
-          animation: path-animation 5s infinite linear;
+          /*animation: path-animation 5s infinite linear;*/
 
         }
 
         .shootingstar{
-          animation: shootingstars 2.7s ease-out infinite 0s;
+          /*animation: shootingstars 2.7s ease-out infinite 0s;*/
         }
 
         .stargroup3{
