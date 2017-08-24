@@ -1,7 +1,7 @@
 const path = require('path')
 const glob = require('glob')
 
-const DashboardPlugin = require('webpack-dashboard/plugin')
+// const DashboardPlugin = require('webpack-dashboard/plugin')
 
 module.exports = {
   webpack: (config, { dev }) => {
@@ -34,7 +34,7 @@ module.exports = {
       }
     )
 
-    config.plugins.push(new DashboardPlugin())
+    // config.plugins.push(new DashboardPlugin())
     return config
   }
 }
